@@ -1,0 +1,14 @@
+<h1>Edit Post</h1>
+
+<form action="/<%= @post.id %>" method="POST">
+	<input type="hidden" name="_method" value="PUT">
+	<!-- _method - convention to show not 'real' data -->
+	
+	<label>Title</label>
+	<input type="text" name="title" value="<%=@post.title %>">
+
+	<label for="body">Body</label>
+	<textarea name="body"><%= @post.body %></textarea>
+
+	<input type="submit" name="Update Post">
+</form>
